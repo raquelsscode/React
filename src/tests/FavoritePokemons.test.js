@@ -19,13 +19,13 @@ describe('Teste do componente "<FavoritePokemons.js"/>', () => {
 
     const details = screen.getByRole('link', { name: /More details/i });
     userEvent.click(details);
-    const title = await screen.findByRole('checkbox');
-    expect(title).toBeInTheDocument();
-    userEvent.click(title);
+    const check = await screen.findByRole('checkbox');
+    expect(check).toBeInTheDocument();
+    userEvent.click(check);
     const favoritePokémonsEl = screen.getByRole('link', { name: 'Favorite Pokémons' });
     expect(favoritePokémonsEl).toBeInTheDocument();
     userEvent.click(favoritePokémonsEl);
-    const teste = await screen.findByText('Pikachu');
-    expect(teste).toBeInTheDocument();
+    const title = await screen.findByText('Pikachu');
+    expect(title).toBeInTheDocument();
   });
 });
