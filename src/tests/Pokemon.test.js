@@ -22,7 +22,7 @@ describe('Teste do componente "<Pokemon.js"/>', () => {
     // O nome correto do pokémon deve ser mostrado na tela;
     const pokemonName = screen.getByText('Pikachu');
     expect(pokemonName).toBeInTheDocument();
-    // O tipo correto do pokémon deve ser mostrado na tela.
+    // O tipo correto do pokémon deve ser mostrado na tela;
     const pokemonType = screen.getByTestId('pokemon-type');
     expect(pokemonType).toHaveTextContent('Electric');
 
